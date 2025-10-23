@@ -50,12 +50,6 @@ export default function AboutPage() {
       bio: "Natalie brings 8 years of notary experience with expertise in loan signings and complex document preparation. Her attention to detail and commitment to client satisfaction makes her an invaluable member of our team, serving clients across the Tampa Bay area.",
       image: "/images/team/natalie.png",
     },
-    {
-      name: "Larry Rivera",
-      title: "Estate Planning Advisor & Veteran Advocate",
-      bio: "Retired Army Captain Larry Rivera brings military precision and dedication to estate planning services. As a bilingual translator and veteran advocate, he specializes in helping families secure their legacy through comprehensive estate planning documents and personalized guidance.",
-      image: null, // Placeholder for Larry
-    },
   ]
 
   return (
@@ -63,7 +57,7 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-[400px] flex items-center justify-center bg-muted mt-16 lg:mt-20">
+      <section className="relative min-h-[600px] flex items-center justify-center bg-muted mt-16 lg:mt-20">
         <div className="absolute inset-0">
           <Image
             src="/images/banners/banner41600x500.jpg"
@@ -73,11 +67,29 @@ export default function AboutPage() {
             style={{ filter: "brightness(0.4)" }}
           />
         </div>
-        <div className="relative z-10 container mx-auto px-4 lg:px-8 text-center text-white">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-light mb-4 text-balance">About NotariesBy</h1>
-          <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
-            Your trusted partner for professional notary services since 2009
-          </p>
+        <div className="relative z-10 container mx-auto px-4 lg:px-8 py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto text-center text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-light mb-8 text-balance">
+              About NotariesBy
+            </h1>
+
+            {/* Mission Statement */}
+            <div className="bg-white/95 backdrop-blur-sm border border-gray-200 shadow-lg rounded-lg p-8 lg:p-12 mb-6">
+              <h2 className="text-2xl lg:text-3xl font-serif font-light mb-6 text-gray-900">Our Mission</h2>
+              <p className="text-base lg:text-lg text-gray-800 leading-relaxed text-pretty">
+                At Notaries By, our mission is to provide dependable, precise, and compassionate notary and closing
+                services that make every signature matter. As a proud woman-owned business and advocate for our nation's
+                veterans, we partner with real-estate professionals, legal and financial teams, and everyday clients to
+                ensure each transaction is handled with integrity, efficiency, and respect. From real-estate closings to
+                estate planning, business contracts, and personal documents, we create seamless experiences that build
+                trust, foster lasting relationships, and strengthen our community.
+              </p>
+            </div>
+
+            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
+              Your trusted partner for professional notary services since 2009
+            </p>
+          </div>
         </div>
       </section>
 
@@ -87,7 +99,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-serif font-light mb-6">Our Story</h2>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <div className="space-y-4 text-gray-800 leading-relaxed">
                 <p>
                   Founded in 2009, NotaryPro was established with a simple mission: to provide reliable, professional
                   notary services that people can trust. What started as a small office has grown into a full-service
@@ -114,6 +126,23 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Duplicate Mission Statement Section */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-4xl mx-auto bg-gray-50 border border-gray-200 rounded-lg p-8 lg:p-12 shadow-md">
+            <h2 className="text-2xl lg:text-3xl font-serif font-light mb-6 text-gray-900 text-center">Our Mission</h2>
+            <p className="text-base lg:text-lg text-gray-800 leading-relaxed text-center">
+              At Notaries By, our mission is to provide dependable, precise, and compassionate notary and closing
+              services that make every signature matter. As a proud woman-owned business and advocate for our nation's
+              veterans, we partner with real-estate professionals, legal and financial teams, and everyday clients to
+              ensure each transaction is handled with integrity, efficiency, and respect. From real-estate closings to
+              estate planning, business contracts, and personal documents, we create seamless experiences that build
+              trust, foster lasting relationships, and strengthen our community.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Stats Section */}
       <section className="py-16 lg:py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 lg:px-8">
@@ -133,7 +162,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-3xl lg:text-4xl font-serif font-light mb-4">Our Values</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-gray-700 max-w-2xl mx-auto leading-relaxed">
               The principles that guide everything we do
             </p>
           </div>
@@ -147,7 +176,7 @@ export default function AboutPage() {
                     <Icon className="w-8 h-8 text-accent" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{value.description}</p>
+                  <p className="text-gray-700 text-sm leading-relaxed">{value.description}</p>
                 </div>
               )
             })}
@@ -160,13 +189,13 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-serif font-light mb-4">Our Notary Professionals</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-gray-700 max-w-2xl mx-auto leading-relaxed">
               Our experienced professionals are dedicated to providing you with exceptional notary services and
               personalized attention.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {teamMembers.map((member, index) => (
               <div key={index} className="bg-background p-8 rounded-lg border border-border text-center">
                 <div className="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden bg-muted border-4 border-accent/20">
@@ -186,7 +215,7 @@ export default function AboutPage() {
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
                 <p className="text-accent font-medium mb-4 text-sm">{member.title}</p>
-                <p className="text-muted-foreground text-sm leading-relaxed">{member.bio}</p>
+                <p className="text-gray-800 text-sm leading-relaxed">{member.bio}</p>
               </div>
             ))}
           </div>
@@ -200,7 +229,7 @@ export default function AboutPage() {
             <div className="text-center mb-12">
               <Award className="w-16 h-16 text-accent mx-auto mb-4" />
               <h2 className="text-3xl lg:text-4xl font-serif font-light mb-4">Certified & Licensed</h2>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-gray-700 leading-relaxed">
                 Our notaries are fully licensed, bonded, and insured, meeting all state requirements for professional
                 notary services.
               </p>
@@ -209,28 +238,28 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-background p-6 border border-border">
                 <h3 className="font-semibold mb-2">State Licensed Notaries</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-sm text-gray-700 leading-relaxed">
                   All our notaries are commissioned by the state and maintain active licenses in good standing.
                 </p>
               </div>
 
               <div className="bg-background p-6 border border-border">
                 <h3 className="font-semibold mb-2">Bonded & Insured</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-sm text-gray-700 leading-relaxed">
                   We carry comprehensive bonding and insurance to protect our clients and their documents.
                 </p>
               </div>
 
               <div className="bg-background p-6 border border-border">
                 <h3 className="font-semibold mb-2">Background Checked</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-sm text-gray-700 leading-relaxed">
                   Every notary on our team has passed thorough background checks and screening processes.
                 </p>
               </div>
 
               <div className="bg-background p-6 border border-border">
                 <h3 className="font-semibold mb-2">Continuing Education</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-sm text-gray-700 leading-relaxed">
                   We stay current with ongoing training and education in notary law and best practices.
                 </p>
               </div>
@@ -243,7 +272,7 @@ export default function AboutPage() {
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-serif font-light mb-6">Ready to Work With Us?</h2>
-          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
             Experience the difference of working with a professional notary service that truly cares about your needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

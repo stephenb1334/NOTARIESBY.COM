@@ -202,19 +202,10 @@ export default function ServicesPage() {
             <p className="text-primary-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed">
               Contact us today to schedule your appointment. We're ready to help with all your notarization needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <Link href="/schedule">
-                <Button size="lg" className="bg-white text-primary hover:bg-white/90 w-full sm:w-auto">
+                <Button size="lg" className="bg-white text-primary hover:bg-white/90">
                   Schedule Appointment
-                </Button>
-              </Link>
-              <Link href="/resources">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white/10 w-full sm:w-auto bg-transparent"
-                >
-                  View Resources
                 </Button>
               </Link>
             </div>

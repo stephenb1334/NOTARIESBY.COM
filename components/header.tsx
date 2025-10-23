@@ -39,9 +39,6 @@ export function Header() {
             <Link href="/about" className="text-sm hover:text-white/70 transition-colors">
               About
             </Link>
-            <Link href="/resources" className="text-sm hover:text-white/70 transition-colors">
-              Resources
-            </Link>
             <Link href="/contact" className="text-sm hover:text-white/70 transition-colors">
               Contact
             </Link>
@@ -89,13 +86,6 @@ export function Header() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About
-              </Link>
-              <Link
-                href="/resources"
-                className="text-sm hover:text-white/70 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Resources
               </Link>
               <Link
                 href="/contact"
