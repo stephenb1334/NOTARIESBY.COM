@@ -160,7 +160,7 @@ export default function SchedulePage() {
             <div className="space-y-6">
               <div className="bg-muted p-6 rounded-lg">
                 <h3 className="font-semibold mb-4">Need Urgent Assistance?</h3>
-                <p className="text-sm text-muted-foreground mb-4">
+                <p className="text-sm text-gray-700 mb-4">
                   For same-day or urgent appointments, please call us directly:
                 </p>
                 <a
@@ -170,12 +170,12 @@ export default function SchedulePage() {
                   <Phone className="w-5 h-5" />
                   (727) 710-5455
                 </a>
-                <p className="text-xs text-muted-foreground mt-2">Mon-Sat: 9AM-7PM</p>
+                <p className="text-xs text-gray-700 mt-2">Mon-Sat: 9AM-7PM</p>
               </div>
 
               <div className="bg-muted p-6 rounded-lg">
                 <h3 className="font-semibold mb-4">What to Bring</h3>
-                <ul className="space-y-2 text-sm text-muted-foreground">
+                <ul className="space-y-2 text-sm text-gray-700">
                   <li>• Valid government-issued photo ID</li>
                   <li>• All documents requiring notarization</li>
                   <li>• Any additional signers with their IDs</li>
@@ -185,7 +185,7 @@ export default function SchedulePage() {
 
               <div className="bg-muted p-6 rounded-lg">
                 <h3 className="font-semibold mb-4">Service Areas</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-gray-700">
                   We provide mobile notary services throughout all 67 Florida counties, with a focus on the Tampa Bay
                   area.
                 </p>

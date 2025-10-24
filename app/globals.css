@@ -466,4 +466,66 @@
   .text-silver-chalice {
     color: #a9a9a9;
   }
+
+  /* Reveal animation utilities aligned to NotariesBy design system */
+  .reveal {
+    --reveal-duration: var(--transition-slow);
+    --reveal-ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --reveal-delay: 0ms;
+    --reveal-offset-x: 24px;
+    --reveal-offset-y: 0px;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+    transition: opacity var(--reveal-duration), transform var(--reveal-duration);
+    will-change: opacity, transform;
+  }
+
+  /* Direction presets using subtle offsets */
+  .reveal[data-direction="left"] {
+    transform: translate3d(calc(var(--reveal-offset-x) * -1), var(--reveal-offset-y), 0);
+  }
+  .reveal[data-direction="right"] {
+    transform: translate3d(var(--reveal-offset-x), var(--reveal-offset-y), 0);
+  }
+  .reveal[data-direction="up"] {
+    transform: translate3d(0, calc(var(--reveal-offset-y) * 1), 0);
+  }
+  .reveal[data-direction="down"] {
+    transform: translate3d(0, calc(var(--reveal-offset-y) * -1), 0);
+  }
+
+  .reveal.reveal-in {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition-timing-function: var(--reveal-ease);
+  }
+
+  /* Optional: child stagger */
+  .reveal.reveal-in > * {
+    transition: opacity var(--reveal-duration), transform var(--reveal-duration);
+  }
+  .reveal > *:nth-child(1) {
+    transition-delay: calc(var(--reveal-delay) + 0ms);
+  }
+  .reveal > *:nth-child(2) {
+    transition-delay: calc(var(--reveal-delay) + 50ms);
+  }
+  .reveal > *:nth-child(3) {
+    transition-delay: calc(var(--reveal-delay) + 100ms);
+  }
+  .reveal > *:nth-child(4) {
+    transition-delay: calc(var(--reveal-delay) + 150ms);
+  }
+
+  /* Respect reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
 }

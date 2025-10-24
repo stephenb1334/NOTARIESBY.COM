@@ -3,10 +3,13 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
 import { Check, MapPin, Heart, FileText, Globe, Clock, Star, Shield } from "lucide-react"
 import Link from "next/link"
 import { ImageCarousel } from "@/components/image-carousel"
 import Image from "next/image"
+import { RevealSection } from "@/components/reveal-section"
+import ProfessionalCredentials from "@/components/professional-credentials"
 
 export default function HomePage() {
   const testimonials = [
@@ -36,7 +39,7 @@ export default function HomePage() {
     <div className="min-h-screen">
       <Header />
 
-      <section className="relative h-[600px] lg:h-[700px] flex items-center justify-center bg-white mt-16 lg:mt-20">
+      <section className="relative h-[420px] md:h-[550px] lg:h-[650px] flex items-center justify-center bg-white mt-16 lg:mt-20">
         <div className="absolute inset-0">
           <Image
             src="/images/hero-notariesby-signature.png"
@@ -49,58 +52,66 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-white/70" />
         </div>
         <div className="relative z-10 container mx-auto px-4 lg:px-8 text-center text-black">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-light mb-6 text-balance leading-tight text-black">
+          <div className="flex flex-col items-center mb-4 md:mb-6">
+            <div className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 relative mb-2 md:mb-3">
+              <Image src="/images/florida-icon.png" alt="Florida" fill className="object-contain" />
+            </div>
+            <p className="text-sm md:text-base lg:text-lg text-black/70 italic font-medium">
+              Proudly Serving All 67 Florida Counties
+            </p>
+          </div>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-light mb-4 md:mb-6 text-balance leading-tight text-black">
             Reliable Mobile Notary Services—On Time, On Your Terms
           </h1>
-          <p className="text-lg md:text-xl text-black/80 mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg lg:text-xl text-black/80 mb-6 md:mb-8 max-w-2xl mx-auto leading-relaxed">
             Certified, insured, and ready to help with real estate closings, affidavits, and general notarizations
             across the West Coast.
           </p>
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
+          <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-6 md:mb-8">
             <Badge
               variant="outline"
-              className="bg-white/95 text-[#4C5870] border-[#4C5870]/20 px-5 py-2.5 text-sm font-medium shadow-sm"
+              className="bg-white/95 text-[#4C5870] border-[#4C5870]/20 px-3 md:px-5 py-1.5 md:py-2.5 text-xs md:text-sm font-medium shadow-sm"
             >
-              <Check className="w-4 h-4 mr-2 text-[#10B981]" />
+              <Check className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2 text-[#10B981]" />
               NNA Certified
             </Badge>
             <Badge
               variant="outline"
-              className="bg-white/95 text-[#4C5870] border-[#4C5870]/20 px-5 py-2.5 text-sm font-medium shadow-sm"
+              className="bg-white/95 text-[#4C5870] border-[#4C5870]/20 px-3 md:px-5 py-1.5 md:py-2.5 text-xs md:text-sm font-medium shadow-sm"
             >
-              <Shield className="w-4 h-4 mr-2 text-[#4C5870]" />
+              <Shield className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2 text-[#4C5870]" />
               Bonded & Insured
             </Badge>
             <Badge
               variant="outline"
-              className="bg-white/95 text-[#4C5870] border-[#4C5870]/20 px-5 py-2.5 text-sm font-medium shadow-sm"
+              className="bg-white/95 text-[#4C5870] border-[#4C5870]/20 px-3 md:px-5 py-1.5 md:py-2.5 text-xs md:text-sm font-medium shadow-sm"
             >
-              <Clock className="w-4 h-4 mr-2 text-[#4C5870]" />
+              <Clock className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2 text-[#4C5870]" />
               Same-Day Appointments
             </Badge>
             <Badge
               variant="outline"
-              className="bg-white/95 text-[#4C5870] border-[#4C5870]/20 px-5 py-2.5 text-sm font-medium shadow-sm"
+              className="bg-white/95 text-[#4C5870] border-[#4C5870]/20 px-3 md:px-5 py-1.5 md:py-2.5 text-xs md:text-sm font-medium shadow-sm"
             >
-              <Clock className="w-4 h-4 mr-2 text-[#4C5870]" />
+              <Clock className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2 text-[#4C5870]" />
               Evenings & Weekends
             </Badge>
             <Badge
               variant="outline"
-              className="bg-white/95 text-[#4C5870] border-[#4C5870]/20 px-5 py-2.5 text-sm font-medium shadow-sm"
+              className="bg-white/95 text-[#4C5870] border-[#4C5870]/20 px-3 md:px-5 py-1.5 md:py-2.5 text-xs md:text-sm font-medium shadow-sm"
             >
-              <MapPin className="w-4 h-4 mr-2 text-[#4C5870]" />
+              <MapPin className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2 text-[#4C5870]" />
               Mobile Service
             </Badge>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <Link href="/services">
-              <Button variant="dark" size="lg" className="w-full sm:w-auto px-8">
+              <Button variant="dark" size="lg" className="w-full sm:w-auto px-6 md:px-8">
                 Learn More
               </Button>
             </Link>
             <Link href="/schedule">
-              <Button variant="cta" size="lg" className="w-full sm:w-auto px-8">
+              <Button variant="cta" size="lg" className="w-full sm:w-auto px-6 md:px-8">
                 Book Now
               </Button>
             </Link>
@@ -110,7 +121,16 @@ export default function HomePage() {
 
       <ImageCarousel />
 
-      <section className="py-16 lg:py-24 bg-[#1F2238] text-white relative overflow-hidden">
+      <Separator className="my-0" />
+
+      <RevealSection
+        as="section"
+        direction="left"
+        className="py-16 lg:py-24 bg-[#1F2238] text-white relative overflow-hidden"
+      >
+        <div className="absolute inset-0">
+          <Image src="/images/expert-notary-services-gradient-bg.jpg" alt="" fill className="object-cover opacity-80" />
+        </div>
         <div className="absolute inset-0 opacity-8">
           <div
             className="absolute inset-0"
@@ -124,14 +144,24 @@ export default function HomePage() {
             <h2 className="text-3xl lg:text-4xl font-serif font-light mb-4">
               Expert Notary Services for Your Most Important Transactions
             </h2>
-            <p className="text-white/90 max-w-3xl mx-auto">
-              We focus on high-value notary services with expertise in loan document signings and estate planning.
+            <p className="text-white/90 max-w-3xl mx-auto mb-8 leading-relaxed">
+              Our mission is critical to our integrity and service to the public at large. We invite you to read our
+              mission statement to better understand who will be servicing the most important moments life brings your
+              way.
             </p>
+            <Link href="/about">
+              <Button
+                size="lg"
+                className="bg-white text-[#1B1C1D] hover:bg-gray-100 rounded-full px-8 py-3 font-medium transition-colors"
+              >
+                Read Our Mission
+              </Button>
+            </Link>
           </div>
         </div>
-      </section>
+      </RevealSection>
 
-      <section className="py-16 lg:py-24 bg-white">
+      <RevealSection as="section" direction="right" className="py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -160,9 +190,9 @@ export default function HomePage() {
                 </li>
               </ul>
 
-              <Link href="/contact">
+              <Link href="/schedule">
                 <Button size="lg" className="bg-[#2C3036] hover:bg-[#4C5870] text-white">
-                  Book Loan Document Signing
+                  Book a Notarized Loan Signing
                 </Button>
               </Link>
             </div>
@@ -176,17 +206,12 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </RevealSection>
 
-      <section className="py-16 lg:py-24 bg-gray-50">
+      <Separator className="my-0" />
+
+      <RevealSection as="section" direction="left" className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-serif font-light mb-4 text-gray-900">Our Notary Services</h2>
-            <p className="text-gray-700 max-w-2xl mx-auto">
-              We provide comprehensive notary and related services throughout Florida.
-            </p>
-          </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Document Services */}
             <Card className="hover:shadow-lg transition-shadow">
@@ -306,9 +331,9 @@ export default function HomePage() {
             </Card>
           </div>
         </div>
-      </section>
+      </RevealSection>
 
-      <section className="py-16 lg:py-24 bg-white">
+      <RevealSection as="section" direction="right" className="py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-serif font-light mb-4 text-gray-900">
@@ -403,10 +428,16 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </RevealSection>
+
+      <Separator className="my-0" />
 
       {/* Elegant Wedding Officiant Services - DARK (Shark) with texture */}
-      <section className="py-16 lg:py-24 bg-[#2C3036] text-white relative overflow-hidden">
+      <RevealSection
+        as="section"
+        direction="left"
+        className="py-16 lg:py-24 bg-[#2C3036] text-white relative overflow-hidden"
+      >
         <div className="absolute inset-0 opacity-8">
           <div
             className="absolute inset-0"
@@ -497,9 +528,9 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </RevealSection>
 
-      <section className="py-16 lg:py-24 bg-gray-50">
+      <RevealSection as="section" direction="right" className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-serif font-light mb-4 text-gray-900">What Our Clients Say</h2>
@@ -525,9 +556,11 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </RevealSection>
 
-      <section className="py-16 lg:py-24 bg-white">
+      <Separator className="my-0" />
+
+      <RevealSection as="section" direction="left" className="py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -546,17 +579,23 @@ export default function HomePage() {
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden">
               <Image
-                src="/images/professional-meeting-space.jpg"
-                alt="Professional meeting space"
+                src="/images/loan-signing-section-image.jpg"
+                alt="Professional notary stamp and documents"
                 fill
                 className="object-cover"
               />
             </div>
           </div>
         </div>
-      </section>
+      </RevealSection>
 
-      <section className="py-16 lg:py-24 bg-[#1F2238] text-white relative overflow-hidden">
+      <Separator className="my-0" />
+
+      <RevealSection
+        as="section"
+        direction="right"
+        className="py-16 lg:py-24 bg-[#1F2238] text-white relative overflow-hidden"
+      >
         <div className="absolute inset-0 opacity-10">
           <div
             className="absolute inset-0"
@@ -594,75 +633,18 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </RevealSection>
 
-      {/* Our Professional Credentials - DARK (Shark) with texture */}
-      <section className="py-16 lg:py-24 bg-[#2C3036] text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-8">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 255, 255, 0.02) 10px, rgba(255, 255, 255, 0.02) 20px)`,
-            }}
-          />
+      <Separator className="my-0" />
+
+      <RevealSection as="section" direction="left" className="py-16 lg:py-24 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <Image src="/images/service-areas-gradient-bg.jpg" alt="" fill className="object-cover" />
         </div>
         <div className="relative z-10 container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-serif font-light mb-4">Our Professional Credentials</h2>
-            <p className="text-white/90 max-w-3xl mx-auto">
-              Licensed, insured, and committed to excellence in every notarization.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
-              <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
-                <Image
-                  src="/images/notary-commission-certificate.jpg"
-                  alt="Notary Commission"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Notary Commission</h3>
-              <p className="text-white/90 text-sm">
-                Commissioned by the State of Florida with current and active notary status.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
-              <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
-                <Image
-                  src="/images/nna-certification-badge.jpg"
-                  alt="NNA Certification"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">NNA Certification</h3>
-              <p className="text-white/90 text-sm">
-                Certified Signing Agent through the National Notary Association with ongoing education.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
-              <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
-                <Image src="/images/eo-insurance-document.jpg" alt="E&O Insurance" fill className="object-cover" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">E&O Insurance</h3>
-              <p className="text-white/90 text-sm">
-                Fully insured with Errors & Omissions coverage for your protection and peace of mind.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 lg:py-24 bg-gray-50">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-serif font-light mb-4 text-gray-900">Service Areas</h2>
-            <p className="text-gray-700 max-w-2xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-serif font-light mb-4 text-white">Service Areas</h2>
+            <p className="text-white/90 max-w-2xl mx-auto">
               We provide mobile notary services throughout all 67 Florida counties, including:
             </p>
           </div>
@@ -684,7 +666,59 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </RevealSection>
+
+      {/* Professional Credentials section */}
+      <ProfessionalCredentials />
+
+      {/* Certified & Trusted Professional credibility section */}
+      <RevealSection as="section" direction="right" className="py-16 lg:py-24 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-serif font-light mb-4 text-gray-900">
+              Certified & Trusted Professional
+            </h2>
+            <p className="text-gray-700 max-w-3xl mx-auto">
+              Our certifications and memberships ensure you receive the highest quality notary services
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16">
+            <div className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 relative flex-shrink-0">
+              <Image
+                src="/images/certifications/certified-trusted-professional.png"
+                alt="Certified & Trusted Professional"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <div className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 relative flex-shrink-0">
+              <Image
+                src="/images/certifications/certified-notary-badge.png"
+                alt="Certified Notary"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <div className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 relative flex-shrink-0">
+              <Image
+                src="/images/certifications/nna-certification.png"
+                alt="NNA Certification"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <div className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 relative flex-shrink-0">
+              <Image
+                src="/images/certifications/loan-signing-system.png"
+                alt="Loan Signing System"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </RevealSection>
 
       <Footer />
     </div>

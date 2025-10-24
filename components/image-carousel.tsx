@@ -15,11 +15,13 @@ export function ImageCarousel() {
   ]
 
   return (
-    <div className="relative overflow-hidden bg-background py-8">
-      <div className="carousel-track flex gap-6">
-        {/* First set of images */}
+    <div className="relative overflow-hidden bg-background py-3 md:py-6 lg:py-8">
+      <div className="carousel-track flex gap-4 md:gap-6">
         {images.map((image, index) => (
-          <div key={`first-${index}`} className="carousel-item flex-shrink-0 w-64 h-48 rounded-lg overflow-hidden">
+          <div
+            key={`first-${index}`}
+            className="carousel-item flex-shrink-0 w-48 h-32 md:w-56 md:h-40 lg:w-64 lg:h-48 rounded-lg overflow-hidden"
+          >
             <img
               src={image.src || "/placeholder.svg"}
               alt={image.alt}
@@ -27,9 +29,11 @@ export function ImageCarousel() {
             />
           </div>
         ))}
-        {/* Duplicate set for seamless loop */}
         {images.map((image, index) => (
-          <div key={`second-${index}`} className="carousel-item flex-shrink-0 w-64 h-48 rounded-lg overflow-hidden">
+          <div
+            key={`second-${index}`}
+            className="carousel-item flex-shrink-0 w-48 h-32 md:w-56 md:h-40 lg:w-64 lg:h-48 rounded-lg overflow-hidden"
+          >
             <img
               src={image.src || "/placeholder.svg"}
               alt={image.alt}
@@ -41,19 +45,13 @@ export function ImageCarousel() {
 
       <style jsx>{`
         @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
         }
-
         .carousel-track {
-          animation: scroll 40s linear infinite;
+          animation: scroll 80s linear infinite; /* was 40s; doubled for 50% speed */
           width: fit-content;
         }
-
         .carousel-track:hover {
           animation-play-state: paused;
         }

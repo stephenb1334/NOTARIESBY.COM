@@ -32,7 +32,7 @@ export default function ContactPage() {
             {/* Contact Information */}
             <div>
               <h2 className="text-3xl lg:text-4xl font-serif font-light mb-6">Get In Touch</h2>
-              <p className="text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-gray-700 mb-8 leading-relaxed">
                 Have questions or ready to schedule an appointment? We're here to help. Fill out the form or reach out
                 directly using the contact information below.
               </p>
@@ -44,8 +44,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Phone</h3>
-                    <p className="text-muted-foreground text-sm">(555) 123-4567</p>
-                    <p className="text-muted-foreground text-sm">Mon-Fri: 9am - 6pm</p>
+                    <p className="text-gray-700 text-sm">(555) 123-4567</p>
+                    <p className="text-gray-700 text-sm">Mon-Fri: 9am - 6pm</p>
                   </div>
                 </div>
 
@@ -55,8 +55,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
-                    <p className="text-muted-foreground text-sm">info@notarypro.com</p>
-                    <p className="text-muted-foreground text-sm">We respond within 24 hours</p>
+                    <p className="text-gray-700 text-sm">info@notarypro.com</p>
+                    <p className="text-gray-700 text-sm">We respond within 24 hours</p>
                   </div>
                 </div>
 
@@ -66,7 +66,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Office Location</h3>
-                    <p className="text-muted-foreground text-sm">
+                    <p className="text-gray-700 text-sm">
                       123 Main Street, Suite 100
                       <br />
                       Your City, ST 12345
@@ -80,7 +80,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Business Hours</h3>
-                    <div className="text-muted-foreground text-sm space-y-1">
+                    <div className="text-gray-700 text-sm space-y-1">
                       <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
                       <p>Saturday: 10:00 AM - 4:00 PM</p>
                       <p>Sunday: By Appointment Only</p>

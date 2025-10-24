@@ -147,9 +147,7 @@ export default function FAQPage() {
                     <AccordionTrigger className="text-left hover:no-underline py-4">
                       <span className="font-semibold">{faq.question}</span>
                     </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground leading-relaxed pb-4">
-                      {faq.answer}
-                    </AccordionContent>
+                    <AccordionContent className="text-gray-700 leading-relaxed pb-4">{faq.answer}</AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion>
@@ -162,7 +160,7 @@ export default function FAQPage() {
       <section className="py-16 lg:py-24 bg-muted">
         <div className="container mx-auto px-4 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-serif font-light mb-6">Still Have Questions?</h2>
-          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
             Can't find the answer you're looking for? Our team is here to help. Contact us and we'll be happy to assist
             you.
           </p>

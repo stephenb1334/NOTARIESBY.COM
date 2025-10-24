@@ -107,7 +107,7 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-3xl lg:text-4xl font-serif font-light mb-4">What We Offer</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-gray-700 max-w-2xl mx-auto leading-relaxed">
               Professional notarization services for individuals, businesses, and legal professionals
             </p>
           </div>
@@ -136,7 +136,7 @@ export default function ServicesPage() {
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-2 text-sm">
                         <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                        <span className="text-muted-foreground">{feature}</span>
+                        <span className="text-gray-700">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -155,7 +155,7 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-3xl lg:text-4xl font-serif font-light mb-4">How It Works</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-gray-700 max-w-2xl mx-auto leading-relaxed">
               Getting your documents notarized is simple and straightforward
             </p>
           </div>
@@ -166,7 +166,7 @@ export default function ServicesPage() {
                 1
               </div>
               <h3 className="text-xl font-semibold mb-2">Schedule Appointment</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-gray-700 text-sm leading-relaxed">
                 Contact us to schedule an appointment at our office or request mobile service to your location.
               </p>
             </div>
@@ -176,7 +176,7 @@ export default function ServicesPage() {
                 2
               </div>
               <h3 className="text-xl font-semibold mb-2">Bring Your Documents</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-gray-700 text-sm leading-relaxed">
                 Bring your documents and valid government-issued ID. We'll review everything with you.
               </p>
             </div>
@@ -186,7 +186,7 @@ export default function ServicesPage() {
                 3
               </div>
               <h3 className="text-xl font-semibold mb-2">Get Notarized</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-gray-700 text-sm leading-relaxed">
                 We'll notarize your documents quickly and professionally, ensuring legal compliance.
               </p>
             </div>
