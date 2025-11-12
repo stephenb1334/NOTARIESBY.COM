@@ -75,7 +75,7 @@ export default function HomePage() {
     <div className="min-h-screen">
       <Header />
 
-      <section className="relative h-[420px] md:h-[550px] lg:h-[650px] flex items-center justify-center bg-white mt-16 lg:mt-20">
+      <section className="relative min-h-[624px] md:h-[715px] lg:h-[845px] flex items-center justify-center bg-white mt-16 lg:mt-20 py-8 md:py-12">
         <div className="absolute inset-0">
           <Image
             src="/images/hero-notariesby-signature.png"
@@ -87,8 +87,8 @@ export default function HomePage() {
           />
           <div className="absolute inset-0 bg-white/70" />
         </div>
-        <div className="relative z-10 container mx-auto px-4 lg:px-8 text-center text-black">
-          <div className="flex flex-col items-center mb-4 md:mb-6">
+        <div className="relative z-10 container mx-auto px-6 md:px-8 lg:px-8 text-center text-black">
+          <div className="flex flex-col items-center mb-3 md:mb-5">
             <div className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 relative mb-2 md:mb-3">
               <Image src="/images/florida-state-icon.png" alt="Florida" fill className="object-contain" />
             </div>
@@ -96,14 +96,14 @@ export default function HomePage() {
               Proudly Serving All 67 Florida Counties
             </p>
           </div>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-light mb-4 md:mb-6 text-balance leading-tight text-black">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-light mb-3 md:mb-5 text-balance leading-tight text-black">
             Reliable Mobile Notary Services—On Time, On Your Terms
           </h1>
-          <p className="text-base md:text-lg lg:text-xl text-black/80 mb-6 md:mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg lg:text-xl text-black/80 mb-4 md:mb-6 max-w-2xl mx-auto leading-relaxed">
             Certified, insured, and ready to help with real estate closings, affidavits, and general notarizations
             across the West Coast.
           </p>
-          <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-6 md:mb-8">
+          <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-4 md:mb-6 lg:mb-8">
             <Badge
               variant="outline"
               className="bg-white/95 text-[#4C5870] border-[#4C5870]/20 px-3 md:px-5 py-1.5 md:py-2.5 text-xs md:text-sm font-medium shadow-sm"
@@ -162,7 +162,7 @@ export default function HomePage() {
       <RevealSection
         as="section"
         direction="left"
-        className="py-16 lg:py-24 bg-[#1F2238] text-white relative overflow-hidden"
+        className="py-16 md:py-20 lg:py-24 bg-[#1F2238] text-white relative overflow-hidden"
       >
         <div className="absolute inset-0">
           <Image src="/images/expert-notary-services-gradient-bg.jpg" alt="" fill className="object-cover opacity-80" />
@@ -175,12 +175,12 @@ export default function HomePage() {
             }}
           />
         </div>
-        <div className="relative z-10 container mx-auto px-4 lg:px-8">
-          <div className="text-center mb-12">
+        <div className="relative z-10 container mx-auto px-6 md:px-8 lg:px-8">
+          <div className="text-center">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-light mb-4">
               Expert Notary Services for Your Most Important Transactions
             </h2>
-            <p className="text-white/90 max-w-3xl mx-auto mb-8 leading-relaxed">
+            <p className="text-white/90 max-w-3xl mx-auto mb-6 md:mb-8 leading-relaxed">
               Our mission is critical to our integrity and service to the public at large. We invite you to read our
               mission statement to better understand who will be servicing the most important moments life brings your
               way.
@@ -197,8 +197,8 @@ export default function HomePage() {
         </div>
       </RevealSection>
 
-      <RevealSection as="section" direction="right" className="py-16 lg:py-24 bg-white">
-        <div className="container mx-auto px-4 lg:px-8">
+      <RevealSection as="section" direction="right" className="py-12 md:py-16 lg:py-20 bg-white">
+        <div className="container mx-auto px-6 md:px-8 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-light mb-6 text-gray-900">
@@ -248,8 +248,8 @@ export default function HomePage() {
 
       <Separator className="my-0" />
 
-      <RevealSection as="section" direction="left" className="py-16 lg:py-24 bg-gray-50">
-        <div className="container mx-auto px-4 lg:px-8">
+      <RevealSection as="section" direction="left" className="py-12 md:py-16 lg:py-20 bg-gray-50">
+        <div className="container mx-auto px-6 md:px-8 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Document Services */}
             <Card className="hover:shadow-lg transition-shadow">
@@ -371,8 +371,8 @@ export default function HomePage() {
         </div>
       </RevealSection>
 
-      <RevealSection as="section" direction="right" className="py-16 lg:py-24 bg-white">
-        <div className="container mx-auto px-4 lg:px-8">
+      <RevealSection as="section" direction="right" className="py-12 md:py-16 lg:py-20 bg-white">
+        <div className="container mx-auto px-6 md:px-8 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-light mb-4 text-gray-900">
               Florida Apostille Services
@@ -474,7 +474,7 @@ export default function HomePage() {
       <RevealSection
         as="section"
         direction="left"
-        className="py-16 lg:py-24 bg-[#2C3036] text-white relative overflow-hidden"
+        className="py-12 md:py-16 lg:py-20 bg-[#2C3036] text-white relative overflow-hidden"
       >
         <div className="absolute inset-0 opacity-8">
           <div
@@ -484,7 +484,7 @@ export default function HomePage() {
             }}
           />
         </div>
-        <div className="relative z-10 container mx-auto px-4 lg:px-8">
+        <div className="relative z-10 container mx-auto px-6 md:px-8 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-light mb-4">
               Elegant Wedding Officiant Services
@@ -570,8 +570,8 @@ export default function HomePage() {
         </div>
       </RevealSection>
 
-      <RevealSection as="section" direction="right" className="py-16 lg:py-24 bg-gray-50">
-        <div className="container mx-auto px-4 lg:px-8">
+      <RevealSection as="section" direction="right" className="py-12 md:py-16 lg:py-20 bg-gray-50">
+        <div className="container mx-auto px-6 md:px-8 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-light mb-4 text-gray-900">
               What Our Clients Say
@@ -609,8 +609,8 @@ export default function HomePage() {
 
       <Separator className="my-0" />
 
-      <RevealSection as="section" direction="left" className="py-16 lg:py-24 bg-white">
-        <div className="container mx-auto px-4 lg:px-8">
+      <RevealSection as="section" direction="left" className="py-12 md:py-16 lg:py-20 bg-white">
+        <div className="container mx-auto px-6 md:px-8 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-light mb-6 text-gray-900">
@@ -643,7 +643,7 @@ export default function HomePage() {
       <RevealSection
         as="section"
         direction="right"
-        className="py-16 lg:py-24 bg-[#1F2238] text-white relative overflow-hidden"
+        className="py-12 md:py-16 lg:py-20 bg-[#1F2238] text-white relative overflow-hidden"
       >
         <div className="absolute inset-0 opacity-10">
           <div
@@ -653,7 +653,7 @@ export default function HomePage() {
             }}
           />
         </div>
-        <div className="relative z-10 container mx-auto px-4 lg:px-8">
+        <div className="relative z-10 container mx-auto px-6 md:px-8 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-light mb-6">Our Founder</h2>
@@ -686,11 +686,11 @@ export default function HomePage() {
 
       <Separator className="my-0" />
 
-      <RevealSection as="section" direction="left" className="py-16 lg:py-24 relative overflow-hidden">
+      <RevealSection as="section" direction="left" className="py-12 md:py-16 lg:py-20 relative overflow-hidden">
         <div className="absolute inset-0">
           <Image src="/images/service-areas-gradient-bg.jpg" alt="" fill className="object-cover" />
         </div>
-        <div className="relative z-10 container mx-auto px-4 lg:px-8">
+        <div className="relative z-10 container mx-auto px-6 md:px-8 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-light mb-4 text-white">Service Areas</h2>
             <p className="text-white/90 max-w-2xl mx-auto">
@@ -721,8 +721,8 @@ export default function HomePage() {
       <ProfessionalCredentials />
 
       {/* Certified & Trusted Professional credibility section */}
-      <RevealSection as="section" direction="right" className="py-16 lg:py-24 bg-white">
-        <div className="container mx-auto px-4 lg:px-8">
+      <RevealSection as="section" direction="right" className="py-12 md:py-16 lg:py-20 bg-white">
+        <div className="container mx-auto px-6 md:px-8 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-light mb-4 text-gray-900">
               Certified & Trusted Professional
