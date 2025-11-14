@@ -2,25 +2,12 @@
 
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { Hero } from "@/components/hero"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader } from "@/components/ui/card"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/components/ui/collapsible"
-import {
-  Check,
-  ChevronDown,
-  FileText,
-  Home,
-  ScrollText,
-  Globe,
-  Car,
-  Briefcase,
-  Languages,
-  Heart,
-  Clock,
-  MapPin,
-  DollarSign,
-} from "lucide-react"
+import { Check, ChevronDown, FileText, Home, ScrollText, Globe, Car, Briefcase, Languages, Heart, Clock, MapPin, DollarSign } from 'lucide-react'
 import Link from "next/link"
 import { useState } from "react"
 
@@ -29,11 +16,14 @@ export default function ServicesPage() {
     <div className="min-h-screen bg-gray-50">
       <Header />
 
-      <section className="bg-gray-50 py-8">
-        <div className="container mx-auto px-4 lg:px-8">
-          <h1 className="text-3xl lg:text-4xl font-semibold text-gray-900">Our Services</h1>
-        </div>
-      </section>
+      {/* Hero Component */}
+      <Hero
+        eyebrow="Services"
+        title="Professional Notary Services"
+        subtitle="Trusted & Reliable — Mobile service across all 67 Florida counties. Book in minutes."
+        ctaPrimary={{ href: "/schedule", label: "Book Now" }}
+        ctaSecondary={{ href: "/contact", label: "Contact Us" }}
+      />
 
       {/* Service Tabs Navigation */}
       <section className="bg-white border-b border-gray-200">

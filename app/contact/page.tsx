@@ -1,8 +1,9 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ContactForm } from "@/components/contact-form"
-import { Mail, Phone, MapPin, Clock } from "lucide-react"
+import { Mail, Phone, MapPin, Clock } from 'lucide-react'
 import Image from "next/image"
+import { Address } from "@/components/address"
 
 export default function ContactPage() {
   return (
@@ -40,8 +41,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Phone</h3>
-                    <p className="text-gray-700 text-sm">(555) 123-4567</p>
-                    <p className="text-gray-700 text-sm">Mon-Fri: 9am - 6pm</p>
+                    <p className="text-gray-700 text-sm">727-710-5455</p>
+                    <p className="text-gray-700 text-sm">Mon-Sat: 9AM-7PM</p>
                   </div>
                 </div>
 
@@ -51,7 +52,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
-                    <p className="text-gray-700 text-sm">info@notarypro.com</p>
+                    <p className="text-gray-700 text-sm">info@notariesby.com</p>
                     <p className="text-gray-700 text-sm">We respond within 24 hours</p>
                   </div>
                 </div>
@@ -62,11 +63,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Office Location</h3>
-                    <p className="text-gray-700 text-sm">
-                      123 Main Street, Suite 100
-                      <br />
-                      Your City, ST 12345
-                    </p>
+                    <Address className="text-sm text-gray-700" />
                   </div>
                 </div>
 
@@ -113,7 +110,7 @@ export default function ContactPage() {
           <p className="text-primary-foreground/90 mb-4">
             We offer 24/7 emergency mobile notary services for urgent situations.
           </p>
-          <p className="text-xl font-semibold">Call: (555) 123-4567</p>
+          <p className="text-xl font-semibold">Call: 727-710-5455</p>
         </div>
       </section>
 

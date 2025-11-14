@@ -1,5 +1,6 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { Address, NOTARIES_BY_ADDRESS_LINES } from "@/components/address"
 
 export default function PrivacyPage() {
   return (
@@ -102,10 +103,10 @@ export default function PrivacyPage() {
                 If you have questions about this Privacy Policy or our privacy practices, please contact us at:
               </p>
               <div className="mt-4 text-muted-foreground">
-                <p className="font-semibold">West Coast Notaries, LLC d/b/a NotariesBy</p>
-                <p>Tampa Bay Area, FL</p>
+                <p className="font-semibold">West Coast Notaries, LLC d/b/a {NOTARIES_BY_ADDRESS_LINES[0]}</p>
+                <Address />
                 <p>Email: info@notariesby.com</p>
-                <p>Phone: (727) 710-5455</p>
+                <p>Phone: 727-710-5455</p>
               </div>
             </section>
           </div>

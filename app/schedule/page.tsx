@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Phone } from "lucide-react"
+import { Phone } from 'lucide-react'
 
 export default function SchedulePage() {
   const timeSlots = [
@@ -168,7 +168,7 @@ export default function SchedulePage() {
                   className="flex items-center gap-2 text-lg font-semibold text-accent hover:text-accent/80"
                 >
                   <Phone className="w-5 h-5" />
-                  (727) 710-5455
+                  727-710-5455
                 </a>
                 <p className="text-xs text-gray-700 mt-2">Mon-Sat: 9AM-7PM</p>
               </div>

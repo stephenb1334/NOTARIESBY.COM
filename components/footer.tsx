@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { Mail, Phone, MapPin, Facebook, Instagram } from "lucide-react"
+import { Mail, Phone, MapPin, Facebook, Instagram } from 'lucide-react'
+import { Address } from "./address"
 
 export function Footer() {
   return (
@@ -73,7 +74,7 @@ export function Footer() {
               <li className="flex items-start gap-2">
                 <Phone size={16} className="mt-0.5 flex-shrink-0" />
                 <div className="text-sm text-white/70">
-                  (727) 710-5455
+                  727-710-5455
                   <br />
                   <span className="text-xs">Mon-Sat: 9AM-7PM</span>
                 </div>
@@ -88,11 +89,11 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-2">
                 <MapPin size={16} className="mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-white/70">
-                  Tampa Bay Area, FL
+                <div className="text-sm text-white/70">
+                  <Address className="inline" />
                   <br />
                   Mobile service - we come to you!
-                </span>
+                </div>
               </li>
             </ul>
           </div>
@@ -105,7 +106,7 @@ export function Footer() {
                 © {new Date().getFullYear()} West Coast Notaries, LLC d/b/a NotariesBy. All rights reserved.
               </p>
               <p className="text-xs text-white/50 mt-1">
-                NotariesBy is a fictitious name registered under West Coast Notaries, LLC
+                Notaries By Name is a registered fictitious name of West Coast Notaries LLC
               </p>
             </div>
             <div className="flex gap-6">

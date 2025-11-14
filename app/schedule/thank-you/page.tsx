@@ -1,7 +1,7 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
-import { CheckCircle } from "lucide-react"
+import { CheckCircle } from 'lucide-react'
 import Link from "next/link"
 
 export default function ThankYouPage() {
@@ -77,7 +77,7 @@ export default function ThankYouPage() {
           <p className="text-sm text-muted-foreground mt-8">
             Need immediate assistance? Call us at{" "}
             <a href="tel:7277105455" className="text-accent hover:underline">
-              (727) 710-5455
+              727-710-5455
             </a>
           </p>
         </div>
