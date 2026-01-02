@@ -1,6 +1,8 @@
 "use client"
 
-import { useSearchParams } from "next/navigation"
+import type React from "react"
+
+import { useSearchParams, useRouter } from "next/navigation"
 import { Suspense, useEffect, useState } from "react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
@@ -10,7 +12,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Phone } from "lucide-react"
+import { Phone, Loader2 } from "lucide-react"
 
 const serviceMapping: Record<string, string> = {
   document: "general-notary",
@@ -28,7 +30,11 @@ const serviceMapping: Record<string, string> = {
 
 function BookingForm() {
   const searchParams = useSearchParams()
+  const router = useRouter()
   const [selectedService, setSelectedService] = useState<string>("")
+  const [selectedTime, setSelectedTime] = useState<string>("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
     const serviceParam = searchParams.get("service")
@@ -37,6 +43,48 @@ function BookingForm() {
       setSelectedService(mappedService)
     }
   }, [searchParams])
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setError(null)
+
+    const form = e.currentTarget
+    const formData = new FormData(form)
+
+    formData.set("service", selectedService)
+    formData.set("preferred_time", selectedTime)
+
+    console.log("[v0] Schedule form data being submitted:")
+    formData.forEach((value, key) => {
+      console.log(`[v0] ${key}: ${value}`)
+    })
+
+    try {
+      const response = await fetch("https://formspree.io/f/xrbrgjla", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      })
+
+      console.log("[v0] Response status:", response.status)
+      const responseData = await response.json()
+      console.log("[v0] Response data:", responseData)
+
+      if (response.ok) {
+        router.push("/thanks")
+      } else {
+        setError(responseData.error || "Failed to submit booking. Please try again.")
+      }
+    } catch (err) {
+      console.error("[v0] Form submission error:", err)
+      setError("Network error. Please check your connection and try again.")
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
 
   const timeSlots = [
     "9:00 AM",
@@ -71,7 +119,13 @@ function BookingForm() {
             <div className="bg-background border border-border rounded-lg p-8">
               <h2 className="text-2xl font-semibold mb-6">Book Your Service</h2>
 
-              <form action="https://formspree.io/f/XXXXXXXX" method="POST" className="space-y-6">
+              {error && (
+                <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400 text-sm">
+                  {error}
+                </div>
+              )}
+
+              <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Service Selection */}
                 <div className="space-y-2">
                   <Label htmlFor="service">Select Service *</Label>
@@ -94,6 +148,7 @@ function BookingForm() {
                       <SelectItem value="other">Other Service</SelectItem>
                     </SelectContent>
                   </Select>
+                  <input type="hidden" name="service" value={selectedService} />
                 </div>
 
                 {/* Date and Time */}
@@ -104,7 +159,7 @@ function BookingForm() {
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="preferred_time">Preferred Time *</Label>
-                    <Select name="preferred_time" required>
+                    <Select name="preferred_time" required value={selectedTime} onValueChange={setSelectedTime}>
                       <SelectTrigger id="preferred_time">
                         <SelectValue placeholder="Select time" />
                       </SelectTrigger>
@@ -116,6 +171,7 @@ function BookingForm() {
                         ))}
                       </SelectContent>
                     </Select>
+                    <input type="hidden" name="preferred_time" value={selectedTime} />
                   </div>
                 </div>
 
@@ -155,14 +211,20 @@ function BookingForm() {
                 </div>
 
                 {/* Hidden Fields for Formspree */}
-                <input type="hidden" name="_subject" value="New Booking Request" />
-                <input type="hidden" name="_next" value="https://notariesby.com/schedule/thank-you" />
+                <input type="hidden" name="_subject" value="New Booking Request from NotariesBy.com" />
 
                 {/* Honeypot for spam protection */}
                 <input type="text" name="_gotcha" style={{ display: "none" }} />
 
-                <Button type="submit" size="lg" className="w-full">
-                  Book Your Service
+                <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Submitting...
+                    </>
+                  ) : (
+                    "Book Your Service"
+                  )}
                 </Button>
 
                 <p className="text-xs text-muted-foreground text-center">
